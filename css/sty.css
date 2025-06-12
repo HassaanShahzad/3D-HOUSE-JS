@@ -1,0 +1,362 @@
+    #overlayContainer {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  display: none;
+  justify-content: space-between; /* pushes children to far left and right */
+  align-items: center;
+  padding: 0 40px; /* optional: spacing from edges */
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  transform: translateY(-50%);
+}
+
+#overlayContainer.show {
+  display: flex;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.overlay-box {
+  padding: 16px;
+  background-color: #f8f9fa;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  min-width: 280px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.overlay-box2 {
+  padding: 16px;
+  background-color: #f8f9fa;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  min-width: 350px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-control {
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+  #hideBtn {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(135deg, #4a90e2, #357ABD);
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 4px 12px rgba(53, 122, 189, 0.4);
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1;
+    user-select: none;
+  }
+
+  #hideBtn:hover {
+    background: linear-gradient(135deg, #357ABD, #2a5a9f);
+    box-shadow: 0 6px 16px rgba(40, 95, 155, 0.6);
+  }
+
+  #hideBtn:active {
+    background: linear-gradient(135deg, #2a5a9f, #1f4274);
+    box-shadow: 0 2px 8px rgba(20, 65, 110, 0.7);
+    transform: scale(0.97);
+  }
+
+
+
+
+
+.input-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+#customInput {
+  padding-right: 30px; /* space for arrow */
+  font-size: 16px;
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 16 16'%3e%3cpath d='M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zm-3.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 1 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L10.293 7.5H4.5z'/%3e%3c/svg%3e") no-repeat right 10px center;
+  background-size: 19px 19px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+.centered-wrapper {
+  position: fixed;
+  top: 74%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+.centered-input-box {
+  padding: 16px;
+  background-color: #f8f9fa;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  min-width: 350px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+
+
+ .suggestion-box {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 999;
+  }
+
+  .suggestion-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+  }
+
+  .suggestion-item:hover {
+    background-color: #f1f1f1;
+  }
+
+  .suggestion-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+
+  .suggestion-info {
+    flex-grow: 1;
+  }
+
+  .suggestion-stars {
+    color: gold;
+    font-size: 14px;
+  }
+
+   .popup-overlay {
+    position: absolute;      /* changed from fixed */
+    top: 0%;               /* below the input box */
+    right: 350px;                 /* align left side of input box */
+    width: 320px;
+    background: transparent; /* no background */
+    z-index: 1500;
+  }
+
+  /* Popup content box */
+  .popup-content {
+    background: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  }
+
+  .popup-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    border: none;
+    background: transparent;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  .company-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
+  .company-header img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+  }
+
+  .company-info p {
+    margin: 8px 0;
+    font-size: 14px;
+  }
+
+  .company-info a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  .dis {
+    color: black !important;
+  }
+
+
+
+.popLogo {
+  width: 250px;
+  height: 250px;
+ 
+}
+
+  .icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  fill: #007bff; /* Bootstrap blue */
+}
+
+/* Email icon (envelope) */
+.email-icon {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23007bff" viewBox="0 0 24 24"><path d="M20 4H4C2.9 4 2 4.9 2 6v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>') no-repeat center;
+  background-size: contain;
+}
+
+/* Phone icon */
+.phone-icon {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23007bff" viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21c1.2.48 2.5.75 3.83.75a1 1 0 011 1v3.5a1 1 0 01-1 1C9.49 21.44 2.56 14.51 2.56 6a1 1 0 011-1h3.5a1 1 0 011 1c0 1.33.26 2.63.75 3.83a1 1 0 01-.19 1.11l-2.2 2.2z"/></svg>') no-repeat center;
+  background-size: contain;
+}
+
+.website-icon {
+  background: url('data:image/svg+xml;utf8,<svg fill="%23007bff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 5.52 4.48 10 10 10s10-4.48 10-10c0-5.52-4.48-10-10-10zm6.93 7h-2.54c-.15-1.16-.52-2.26-1.09-3.25 1.72.83 3.04 2.29 3.63 3.98zM12 4c.86 1.1 1.41 2.53 1.63 4H10.37c.22-1.47.77-2.9 1.63-4zm-4.6.74c.56.97.94 2.07 1.1 3.21H6.3c.58-1.67 1.87-3.13 3.1-3.21zM4.12 13h3.21c-.05.66-.08 1.33-.08 2s.03 1.34.08 2H4.12c-.05-.65-.08-1.32-.08-2s.03-1.35.08-2zm1.22 5.25c.57-1 1.33-1.85 2.23-2.45-.06.44-.1.89-.1 1.35 0 .46.04.9.1 1.33-1-.37-1.8-1-2.23-2.23zm8.54 1.45c-.88 0-1.73-.32-2.37-.85 1.29-1.39 2.22-3.34 2.62-5.61h3.22c-.15 1.15-.53 2.25-1.1 3.23-1.15 1.79-2.47 2.95-2.37 3.23zm3.69-4.23h-3.22c-.39-2.31-1.31-4.32-2.63-5.72.62-.57 1.43-.93 2.37-.93 1.63 0 3.03 1.07 3.52 2.54.27.84.2 1.76-.04 2.59-.11.4-.27.77-.51 1.11zm-3.34-5.99c.58 1 .94 2.15 1.09 3.35h-2.59c.15-1.2.52-2.35 1.5-3.35z"/></svg>') no-repeat center;
+  background-size: contain;
+}
+
+
+
+  .image2 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 58px;
+  height: 58px;
+  margin-right: 8px;
+  fill: #ff0800 !important; /* Bootstrap blue */
+}
+
+/* Email icon (envelope) */
+.email-image {
+background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23ff0000" viewBox="0 0 24 24"><path d="M3 21v-2h18v2H3zm2-4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v12H5zm2-2h2v-2H7v2zm0-4h2V9H7v2zm0-4h2V5H7v2zm4 8h2v-2h-2v2zm0-4h2V9h-2v2zm0-4h2V5h-2v2zm4 8h2v-2h-2v2zm0-4h2V9h-2v2zm0-4h2V5h-2v2z"/></svg>') no-repeat center;
+background-size: 20px 20px;
+
+  background-size: contain;
+}
+.abc {
+  position: relative !important;
+  left:  -50px !important;
+}
+
+
+
+
+
+  /* Remove vertical centering from Bootstrap */
+  .modal.custom-top .modal-dialog {
+    display: block;
+    margin: 0; /* Remove default auto margins */
+  }
+
+  .modal.custom-top .modal-dialog {
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+  }
+
+  /* Ensure full height and layering */
+  .custom-modal-content {
+    height: 100vh;
+    border-radius: 0;
+    z-index: 3 !important;
+  }
+
+  .modal.custom-top {
+    padding: 0 !important;
+    z-index: 3 !important;
+  }
+
+  .modal-backdrop {
+    z-index: 2 !important;
+  }
+
+.abc2 {
+
+}
+.custom-modal-content {
+  padding: 20px;
+}
+.company-info p {
+  margin-bottom: 20px;
+}
+.mr {
+    margin-bottom: 20px;
+
+}
+.mrr {
+    margin-bottom: 50px !important;
+
+}.custom-modal-width {
+  width: 90%;
+  max-width: 900px; /* Optional: limit on large screens */
+  margin: auto;
+}
+
+@media (min-width: 768px) {
+  .custom-modal-width {
+    width: 70%;
+  }
+}
+
+@media (min-width: 992px) {
+  .custom-modal-width {
+    width: 60%;
+  }
+}
+
+/* Add this to your CSS */
+.blur-background {
+  filter: blur(5px);
+  transition: filter 0.3s ease;
+}
+
+
+
+
+
+
