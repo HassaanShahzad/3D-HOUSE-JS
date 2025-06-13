@@ -5,12 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>3D House</title>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/sttyle.css">
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+   
 
     <style>
 
@@ -59,38 +55,26 @@ body::before {
   
     </style>
 
-    <!-- Three.js Import Map -->
-    <script type="importmap">
-      {
-        "imports": {
-          "three": "https://cdn.jsdelivr.net/npm/three@0.153.0/build/three.module.js",
-          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.153.0/examples/jsm/"
-        }
-      }
-    </script>
+    <script type="module" crossorigin src="/assets/main-CEhmCGev.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/main-DBp44X5O.css">
   </head>
 
   <body class="abc">
 
 
 
-<video id="bgVideo" autoplay muted playsinline
-  style="
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    z-index:2000;
-    filter: brightness(1);
-    opacity: 1;
-    transition: opacity 2s ease;
-    pointer-events: none;
-  ">
-  <source src="./house5.mov" type="video/mp4">
-</video>
+  <!-- Optimized Background Video -->
+  <video id="bgVideo" autoplay muted playsinline preload="auto"
+    style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+           object-fit: cover; z-index: 2000; filter: brightness(1);">
+    <source src="/assets/house5-CCzq7QQj.mp4" type="video/mp4" />
+  </video>
 
+
+
+
+
+  <div id="loader">Loading...</div>
 
 
 
@@ -202,13 +186,13 @@ body::before {
     <!-- Images Row -->
     <div class="row justify-content-center g-3 mb-4">
       <div class="col-4 col-sm-3 col-md-2">
-        <img src="images/left.png" alt="Left" class="img-fluid blinking" data-bs-toggle="modal" data-bs-target="#infoModal" />
+        <img src="/assets/left-L_Y6QvIQ.png" alt="Left" class="img-fluid blinking" data-bs-toggle="modal" data-bs-target="#infoModal" />
       </div>
       <div class="col-4 col-sm-3 col-md-2">
-        <img src="images/center.png" alt="Center" class="img-fluid blinking" data-bs-toggle="modal" data-bs-target="#infoModal" />
+        <img src="/assets/center-Bft0iWRX.png" alt="Center" class="img-fluid blinking" data-bs-toggle="modal" data-bs-target="#infoModal" />
       </div>
       <div class="col-4 col-sm-3 col-md-2">
-        <img src="images/right.png" alt="Right" class="img-fluid blinking" data-bs-toggle="modal" data-bs-target="#infoModal" />
+        <img src="/assets/right-CnBJo9vq.png" alt="Right" class="img-fluid blinking" data-bs-toggle="modal" data-bs-target="#infoModal" />
       </div>
     </div>
 
@@ -397,112 +381,11 @@ body::before {
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 
 
 
-<script>
- const suggestions = [
-  {
-    postal: "10115",
-    city: "Berlin",
-    distance: "15km",
-    logo: "./images/img.jpg",
-    logo2: "./images/img1.jpg",
-    companyName: "SCHMIDT",
-    companyName2: "Schmidt Bedachungen",
-    companyName3: "Musterstatte 10, 12345 Musterstate",
-    email: "contact@berlinroofing.com",
-    contact: "+49 30 1234567",
-    website: "https://berlinroofing.com"
-  },
-  {
-    postal: "10115",
-    city: "Hamburg",
-    distance: "25km",
-    logo: "./images/img1.jpg",
-    logo2: "./images/img1.jpg",
-    companyName: "SCHMIDT",
-    companyName2: "Schmidt Bedachungen",
-    companyName3: "Musterstatte 10, 12345 Musterstate",
-    email: "info@hamburgroofmasters.de",
-    contact: "+49 40 7654321",
-    website: "https://hamburgroofmasters.de"
-  },
-  {
-    postal: "80331",
-    city: "Munich",
-    distance: "45km",
-    logo: "./images/img3.jpg",
-    logo2: "./images/img3.jpg",
-    companyName: "SCHMIDT",
-    companyName2: "Schmidt Bedachungen",
-    companyName3: "Musterstatte 10, 12345 Musterstate",
-    email: "hello@munichroofexperts.de",
-    contact: "+49 89 9876543",
-    website: "https://munichroofexperts.de"
-  }
-];
 
-function showSuggestions() {
-  const input = document.getElementById("customInput").value.trim();
-  const box = document.getElementById("suggestionBox");
-  box.innerHTML = "";
-
-  if (input.length < 2) {
-    box.style.display = "none";
-    return;
-  }
-
-  const filtered = suggestions.filter(item =>
-    item.postal.startsWith(input) || item.city.toLowerCase().includes(input.toLowerCase())
-  );
-
-  if (filtered.length === 0) {
-    box.style.display = "none";
-    return;
-  }
-
-  filtered.forEach(item => {
-    const div = document.createElement("div");
-    div.className = "suggestion-item";
-    div.innerHTML = `
-      <img src="${item.logo}" class="suggestion-logo" alt="logo" />
-      <div class="suggestion-info">
-        <div><strong>${item.city}</strong></div>
-        <div class="suggestion-stars">⭐⭐⭐⭐⭐  <strong class='dis'>${item.distance}</strong></div>  
-      </div>
-    `;
-    div.onclick = () => showPopup(item);
-    box.appendChild(div);
-  });
-
-  box.style.display = "block";
-}
-
-function showPopup(item) {
-  document.getElementById("popupLogo").src = item.logo2;
-  document.getElementById("popupCompanyName").innerText = item.companyName;
-  document.getElementById("popupCompanyName2").innerText = item.companyName2;
-  document.getElementById("popupCompanyName3").innerText = item.companyName3;
-  document.getElementById("popupEmail").innerText = item.email;
-  document.getElementById("popupContact").innerText = item.contact;
-
-  const websiteLink = document.getElementById("popupWebsite");
-  websiteLink.innerText = item.website;
-  websiteLink.href = item.website;
-
-  const modal = new bootstrap.Modal(document.getElementById("companyModal"));
-  modal.show();
-
-  // Hide suggestions box after clicking a suggestion
-  document.getElementById("suggestionBox").style.display = "none";
-}
-
-
-
-</script>
 
 
 <!-- 
@@ -559,72 +442,6 @@ function showPopup(item) {
 
 
 
-
-
-
-  <script>
-    const bgVideo = document.getElementById('bgVideo');
-    bgVideo.addEventListener('ended', () => {
-      // Fade out by setting opacity to 0
-      bgVideo.style.opacity = '0';
-
-      // Optional: after fade-out completes, pause video or hide element
-      setTimeout(() => {
-        bgVideo.style.display = 'none';
-      }, 300); // match with CSS transition duration
-    });
-  </script>
-    <script>
-$(document).ready(function () {
-  $(".abc").click(function () {
-    $("img").hide(); // Optional behavior on body click
-    $(".box2").hide();
-  });
-
- $(document).ready(function() {
-  $('#hideBtn').click(function() {
-    $('.abcd').hide();
-  // hides the div
-        // $('#hideBtn').hide(); // hides the div
-
-  });
-
-    $('.mod').click(function() {
-   $('.mainContent').addClass('blur-background'); 
-  });
-    $('.cross').click(function() {
-   $('.mainContent').removeClass('blur-background'); 
-  });
-
-  
-  
-  $('#postal').click(function() {
-     $('#postal-input').hide(); 
-
-  });
-
-
-
-});
-
-});
-
-
-
-// document.addEventListener('keydown', (e) => {
-//   if (p.key === 'Escape') {
-//     const overlay = document.getElementById('overlayContainer');
-//     if (overlay) {
-//       overlay.style.opacity = '0';
-//       setTimeout(() => {
-//         overlay.style.display = 'none';
-//       }, 300);  // match CSS transition duration
-//     }
-//   }
-// });
-
-    </script>
-
   <!-- <script>
 $(document).ready(function() {
   // When modal is about to be shown
@@ -640,7 +457,6 @@ $(document).ready(function() {
   });
 });
 </script> -->
-    <!-- Your 3D Three.js Script -->
-    <script type="module" src="js/three.js"></script>
+    <!-- Your 3D Three.js Script -->
   </body>
 </html>
